@@ -3,9 +3,9 @@
 A custom handheld WiFi security auditing tool built around the ESP32-S3 and a 3.5" display.
 
 ## Hardware Specs
-- **Microcontroller:** ESP32-S3
+- **Microcontroller:** ESP32-S3 (N16R8)
 - **Display:** 3.5 inch LCD (via 26-pin connector)
-- **Input:** Planned 5-7 push buttons (D-pad + Center/Action)
+- **Input:** 7x Push buttons (D-pad + Center/Action)
 
 ## Pinout Mapping
 | 26 pin connector / Display pin | Function | ESP32-S3 (Suggested) |
@@ -21,10 +21,23 @@ A custom handheld WiFi security auditing tool built around the ESP32-S3 and a 3.
 | 26 | Touch CS | GPIO14 |
 | 11 | Touch IRQ | GPIO4 |
 
+## Input Mapping (V1)
+| Button Function | Suggested GPIO | Type |
+|---|---|---|
+| **Up** | `GPIO 1` | Digital In (Pull-up) |
+| **Down** | `GPIO 2` | Digital In (Pull-up) |
+| **Left** | `GPIO 3` | Digital In (Pull-up) |
+| **Right** | `GPIO 5` | Digital In (Pull-up) |
+| **Center (Select)** | `GPIO 6` | Digital In (Pull-up) |
+| **Menu / Mode** | `GPIO 7` | Digital In (Pull-up) |
+| **Back / Exit** | `GPIO 15` | Digital In (Pull-up) |
+
 ## Roadmap
 - [x] Brainstorming Phase
+- [x] Feature Definition (V1: Scanner)
+- [x] Project Scaffolding (Folder Structure & Initial config)
 - [ ] Hardware Verification (Display & Basic UI)
-- [ ] Input Logic (D-pad/Button Navigation)
-- [ ] WiFi Scanner Prototype
+- [ ] Input Logic/Driver Implementation
+- [ ] WiFi Scanner Prototype (V1 Goal)
 - [ ] Packet Capture & Handshake Logic
 - [ ] Enclosure/Physical Build
